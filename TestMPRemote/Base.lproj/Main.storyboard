@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mU6-FS-oyR">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Library Prompt View Controller-->
+        <scene sceneID="a5M-F9-phX">
+            <objects>
+                <viewController id="gDY-cH-H4d" customClass="LibraryPromptViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="K8k-7T-d5e"/>
+                        <viewControllerLayoutGuide type="bottom" id="QcC-Ri-4nj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Z5c-iV-b6H">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOb-re-vmc">
+                                <state key="normal" title="Open Player"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="wOC-UJ-pZq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NOb-re-vmc" firstAttribute="centerX" secondItem="Z5c-iV-b6H" secondAttribute="centerX" id="Tr0-id-C3X"/>
+                            <constraint firstItem="NOb-re-vmc" firstAttribute="centerY" secondItem="Z5c-iV-b6H" secondAttribute="centerY" id="vHX-rF-ACA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="4gQ-8d-2Hs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m7Y-Fb-qXb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-113" y="123"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Playback state:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1K-ac-ccI">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gob-Uf-cwh">
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playPauseButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bip-pY-BbM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gob-Uf-cwh" firstAttribute="leading" secondItem="L1K-ac-ccI" secondAttribute="leading" id="2fg-6T-jfS"/>
+                            <constraint firstItem="L1K-ac-ccI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="DUR-da-nWi"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="L1K-ac-ccI" secondAttribute="leading" id="O0A-K9-UUM"/>
+                            <constraint firstItem="gob-Uf-cwh" firstAttribute="top" secondItem="L1K-ac-ccI" secondAttribute="bottom" constant="19.5" id="bEL-1P-U9h"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6Mj-if-3n3"/>
+                    <connections>
+                        <outlet property="playPauseButton" destination="gob-Uf-cwh" id="9OA-y1-fQg"/>
+                        <outlet property="playbackStateLabel" destination="L1K-ac-ccI" id="YnK-l8-Xu4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1115.625" y="122.53521126760563"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JCy-cj-FnG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mU6-FS-oyR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ICv-qI-EcP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gDY-cH-H4d" kind="relationship" relationship="rootViewController" id="GvG-gB-dIh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="abs-mc-mAX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1243" y="123"/>
+        </scene>
+    </scenes>
+</document>
